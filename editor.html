@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Editor</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Select Template</h2>
+
+<div class="templates">
+    <img src="templates/meme1.webp" onclick="selectTemplate(this)">
+    <img src="templates/meme2.webp" onclick="selectTemplate(this)">
+    <img src="templates/poster1.webp" onclick="selectTemplate(this)">
+</div>
+
+<hr>
+
+<h3>OR Upload Your Image</h3>
+<input type="file" accept="image/*" onchange="uploadImage(event)">
+
+<hr>
+
+<h3>Enter Text / Topic</h3>
+<input type="text" id="userInput" placeholder="College fest / Funny exam meme">
+
+<hr>
+
+<h3>Customize Text</h3>
+<select id="textPosition">
+    <option value="top">Top</option>
+    <option value="center">Center</option>
+    <option value="bottom">Bottom</option>
+</select>
+
+<select id="fontStyle">
+    <option value="20px Arial">Arial</option>
+    <option value="20px Verdana">Verdana</option>
+    <option value="20px Times New Roman">Times</option>
+</select>
+
+<input type="color" id="textColor" value="#ffffff">
+
+<br><br>
+<button onclick="generateAICaption()">Generate Caption (AI)</button>
+<button onclick="addMyText()">Add My Text</button>
+
+<hr>
+
+<h3>Preview</h3>
+<canvas id="preview" width="300" height="300"></canvas>
+
+<br><br>
+<a href="download.html">
+    <button onclick="saveImage()">Next</button>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
