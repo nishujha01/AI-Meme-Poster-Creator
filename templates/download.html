@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Download</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Your Final Image</h2>
+<img id="finalImage" width="300">
+
+<br><br>
+<a id="downloadBtn" download="final_image.png">
+    <button>Download</button>
+</a>
+
+<script>
+    const img = localStorage.getItem("finalImage");
+    document.getElementById("finalImage").src = img;
+    document.getElementById("downloadBtn").href = img;
+</script>
+
+</body>
+</html>
